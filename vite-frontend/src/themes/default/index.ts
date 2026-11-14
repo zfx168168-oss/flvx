@@ -130,7 +130,7 @@ const defaultTheme: ThemePackage = {
       "--success": "#22c55e",
       "--warning": "#f59e0b",
     },
-    },
+    }, 
   },
 
   // No component/layout/page overrides — uses all defaults.
