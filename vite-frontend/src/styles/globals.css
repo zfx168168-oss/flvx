@@ -289,5 +289,19 @@ body {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+}/* ====== 强制覆盖卡片样式：去除灰白渐变反光，改为纯暗黑质感 ====== */
+.dark, :root.dark {
+  --glass-card: #131b2e !important;  /* 比背景稍亮一点点的深蓝灰色卡片，纯净无渐变 */
+  --glass-border: rgba(255, 255, 255, 0.07) !important; /* 极细的暗边框，提升高级感 */
+  --glass-bg: #111827 !important;
+}
+
+/* 如果卡片是用特定类名或背景色渲染的，确保其没有杂乱的 linear-gradient 反光 */
+.dark .card, 
+.dark [class*="bg-content1"], 
+.dark [class*="backdrop-blur"] {
+  background-image: none !important;
+  background-color: #131b2e !important;
+  border-color: #1e293b !important;
 }
 
